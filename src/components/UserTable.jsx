@@ -1,6 +1,10 @@
 import React from 'react'
 
 const UserTable = (props) => {
+
+
+
+    //interfaz de las tablas, se encarga de mostrar los datos
     console.log(props.users)
     return ( 
         <table>

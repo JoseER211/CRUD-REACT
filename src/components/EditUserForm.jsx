@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 
 const EditUserForm = (props) => {
 
-    //console.log(props.currentUser)
+    //Actualiza los datos del usuario
 
     const { register, handleSubmit,  setValue,  formState: 
          { errors } } = useForm({

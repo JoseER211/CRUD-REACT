@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form'
 
 const AddUserForm = (props) => {
 
+    //Agrega los datos del usuario
+
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data, e) =>{
