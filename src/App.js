@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UserTable from "./components/UserTable";
 import { v4 as uuidv4 } from "uuid";
 import AddUserForm from "./components/AddUserForm";
@@ -6,14 +6,23 @@ import EditUserForm from "./components/EditUserForm";
 
 function App() {
   //Ingresa usuarios predeterminados
+  function saveData() {
+    const storeUsers = localStorage.getItem("form");
+    if (!storeUsers)
+      return [
+        { id: uuidv4(), name: "Tania", username: "floppydiskette" },
+        { id: uuidv4(), name: "Craig", username: "siliconeidolon" },
+        { id: uuidv4(), name: "Ben", username: "benisphere" },
+      ];
+    return JSON.parse(storeUsers);
+  }
 
-  const UsersData = [
-    { id: uuidv4(), name: "Tania", username: "floppydiskette" },
-    { id: uuidv4(), name: "Craig", username: "siliconeidolon" },
-    { id: uuidv4(), name: "Ben", username: "benisphere" },
-  ];
   //state
-  const [users, setUsers] = useState(UsersData);
+  const [users, setUsers] = useState(saveData);
+
+  useEffect(() => {
+    localStorage.setItem("form", JSON.stringify(users));
+  }, [users]);
 
   //Agregar usuario
   const addUser = (user) => {

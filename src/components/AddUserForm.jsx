@@ -12,7 +12,6 @@ const AddUserForm = (props) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    
     props.addUser(data);
     //limpiar campos
     reset();
