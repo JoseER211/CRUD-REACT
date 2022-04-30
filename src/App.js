@@ -31,7 +31,11 @@ function App() {
   };
   //Eliminar usuarios
   const deleteUser = (id) => {
-    setUsers(users.filter((user) => user.id !== id));
+    
+    if(window.confirm("¿Está seguro de eliminar el registro?")){
+      setUsers(users.filter((user) => user.id !== id));
+    }
+    
   };
 
   //Editar usuarios

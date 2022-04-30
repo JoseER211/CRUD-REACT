@@ -38,7 +38,7 @@ const EditUserForm = (props) => {
       <span className="text-danger text-small d-block mb-2">
         {errors.username && "Este campo es obligatorio"}
       </span>
-      <button>Edit user</button>
+      <button >Edit user</button>
     </form>
   );
 };
