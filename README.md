@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+## Video explicativo
+https://drive.google.com/file/d/152UTfRMGESF0uMpMt7_Fj3kDHUPhomG-/view?usp=drivesdk
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
